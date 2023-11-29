@@ -1,0 +1,10 @@
+:root {
+  --theme-bg-color: hsl(30, 38%, 92%);
+  --theme-white-color: hsl(0, 0%, 100%);
+  --theme-text-color: hsl(228, 12%, 48%);
+  --theme-title-color: hsl(212, 21%, 14%);
+  --theme-hover-color: hsl(156, 42%, 18%);
+  --theme-button-color: hsl(158, 36%, 37%);
+
+  --theme-paragraph-size: 14px;
+}

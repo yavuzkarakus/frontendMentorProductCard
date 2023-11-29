@@ -1,0 +1,188 @@
+@import url(/styles/variables.css);
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-size: var(--theme-paragraph-size);
+}
+
+#mobile-img {
+  display: none;
+}
+
+body {
+  background-color: var(--theme-bg-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--theme-white-color);
+  width: 37.5rem;
+  border-radius: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container > .image > img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+
+.container > .component {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.component header > h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: var(--theme-text-color);
+  letter-spacing: 0.4rem;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+.component main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.component main > h2 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--theme-title-color);
+}
+
+.component main > p {
+  color: var(--theme-text-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .price > p {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--theme-button-color);
+}
+
+main .price > del {
+  font-family: "Montserrat", sans-serif;
+  color: var(--theme-text-color);
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+footer button {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--theme-button-color);
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--theme-white-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+footer button:hover {
+  background-color: var(--theme-hover-color);
+  cursor: pointer;
+}
+
+footer button > svg {
+  transform: scale(0.9);
+}
+
+footer button > span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 376px) {
+  .image > img:first-child {
+    display: none;
+  }
+
+  #mobile-img {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto 1rem;
+  }
+
+  .container > .component {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .component main {
+    gap: 1.2rem;
+  }
+
+  .component header h3 {
+    font-size: 0.85rem;
+  }
+
+  .component main h2 {
+    font-size: 2.3rem;
+  }
+
+  .component main p:nth-child(2) {
+    font-size: 1.04rem;
+  }
+
+  main .price {
+    gap: 1.6rem;
+  }
+
+  main .price p {
+    font-size: 2.4rem;
+  }
+
+  main .price del {
+    font-size: 0.9rem;
+  }
+
+  footer button {
+    padding: 1.75rem;
+  }
+
+  footer button span {
+    font-size: 1rem;
+  }
+}
