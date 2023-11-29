@@ -1,92 +1,302 @@
-# Frontend Mentor - Product preview card component
+# ✅ Frontend Mentor: Product Preview Card Component
 
-![Design preview for the Product preview card component coding challenge](./design/desktop-preview.jpg)
+Hello everybody! 😊
 
-## Welcome! 👋
+🚶‍♂️ I just completed the [Frontend Mentor's product preview card component challenge](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa)! These challenges are fantastic for enhancing your coding skills through hands-on experience with real-world projects.
 
-Thanks for checking out this front-end coding challenge.
+## 🗿 Overview
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+### 📷 Screenshots
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+![Desktop version of the solution](./screenshots/desktop-mobile-view.png)
 
-## The challenge
+🏆 I am happy that I made a fully responsive design, even though it was a little tiring process, I think it turned out a nice design as a result, what do you think?
 
-Your challenge is to build out this product preview card component and get it looking as close to the design as possible.
+### 🔗 Links
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+- CodeSandbox URL: [https://553vgx.csb.app](https://553vgx.csb.app)
+- Live Site URL: [https://yavuzkarakus.github.io/frontendMentorProductCard/](https://yavuzkarakus.github.io/frontendMentorProductCard/)
 
-Your users should be able to:
+## 🚀 My process
 
-- View the optimal layout depending on their device's screen size
-- See hover and focus states for interactive elements
+### ⚡ Built with
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Grid
+- Mobile-friendly full responsive.
 
-## Where to find everything
+### 👾 What I learned
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+In this challenge, I learned the CSS grid structure and CSS flex structure by reinforcing it well. I tried to get a proper result by experimenting as much as possible. It was a good study for me to understand the media query structure better.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+HTML Code Snippets:
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Product preview card component</title>
+    <link rel="stylesheet" media="screen" href="/styles/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="image">
+        <img
+          src="/images/image-product-desktop.jpg"
+          alt="desktop-perfume-img"
+        />
+        <img
+          id="mobile-img"
+          src="/images/image-product-mobile.jpg"
+          alt="mobile-perfume-img"
+        />
+      </section>
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+      <section class="component">
+        <header>
+          <h3>Perfume</h3>
+        </header>
+        <main>
+          <h2>Gabrielle Essence Eau De Parfum</h2>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="price">
+            <p>$149.99</p>
+            <del>$169.99</del>
+          </div>
+        </main>
+        <footer>
+          <button type="button">
+            <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+                fill="#FFF"
+              />
+            </svg>
+            <span> Add to Cart </span>
+          </button>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
+```
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+CSS Code Snippets:
 
-## Building your project
+```css
+@import url(/styles/variables.css);
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-size: var(--theme-paragraph-size);
+}
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+#mobile-img {
+  display: none;
+}
 
-## Deploying your project
+body {
+  background-color: var(--theme-bg-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+.container {
+  background-color: var(--theme-white-color);
+  width: 37.5rem;
+  border-radius: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+.container > .image > img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+.container > .component {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-## Create a custom `README.md`
+.component header > h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: var(--theme-text-color);
+  letter-spacing: 0.4rem;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+.component main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+.component main > h2 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--theme-title-color);
+}
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+.component main > p {
+  color: var(--theme-text-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
 
-## Submitting your solution
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+main .price > p {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--theme-button-color);
+}
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+main .price > del {
+  font-family: "Montserrat", sans-serif;
+  color: var(--theme-text-color);
+  font-weight: 400;
+  font-size: 0.75rem;
+}
 
-## Sharing your solution
+footer button {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--theme-button-color);
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--theme-white-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 0.5rem;
+}
 
-There are multiple places you can share your solution:
+footer button:hover {
+  background-color: var(--theme-hover-color);
+  cursor: pointer;
+}
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+footer button > svg {
+  transform: scale(0.9);
+}
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+footer button > span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 376px) {
+  .image > img:first-child {
+    display: none;
+  }
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+  #mobile-img {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+  }
 
-## Got feedback for us?
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto 1rem;
+  }
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+  .container > .component {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+  .component main {
+    gap: 1.2rem;
+  }
 
-**Have fun building!** 🚀
+  .component header h3 {
+    font-size: 0.85rem;
+  }
+
+  .component main h2 {
+    font-size: 2.3rem;
+  }
+
+  .component main p:nth-child(2) {
+    font-size: 1.04rem;
+  }
+
+  main .price {
+    gap: 1.6rem;
+  }
+
+  main .price p {
+    font-size: 2.4rem;
+  }
+
+  main .price del {
+    font-size: 0.9rem;
+  }
+
+  footer button {
+    padding: 1.75rem;
+  }
+
+  footer button span {
+    font-size: 1rem;
+  }
+}
+```
+
+### 💪 Continued development
+
+For front-end developers, the learning process never ends. For this reason, I want to improve myself as much as possible in HTML and CSS. Then I want to complete my development with JS and React.js, discover new CSS libraries and improve myself in every aspect of the field as much as possible.
+
+## 🚩 Author
+
+- Frontend Mentor - [@yavuzkarakus](https://www.frontendmentor.io/profile/yavuzkarakus)
+
+## 📒 Notes
+
+🚶‍♂️ I plan to continue these challenges as long as I can. If you are interested in these topics, don't forget to tune in and follow me.
+
+⭐ If you liked this project and the challenge, please don't forget to star it.
